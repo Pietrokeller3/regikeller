@@ -1,0 +1,257 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: auto;
+    background-color: #f8f8f8;
+    overflow-x: hidden; /* <- Impede rolagem horizontal */
+}
+
+
+/* Barra superior e inferior */
+.barra-topo {
+    background-color: #fbc5cc;
+    color: white;
+    font-size: 12px;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+
+
+
+.redes-sociais i {
+    margin-right: 10px;
+    color: white;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+}
+
+.busca input {
+    padding: 10px;
+    border: 1px solid #f28fa6;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    width: 250px;
+}
+
+.busca button {
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #f28fa6;
+    border-left: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    color: #f28fa6;
+}
+
+.acoes {
+    display: flex;
+    gap: 30px;
+    text-align: center;
+    color: #f28fa6;
+}
+
+.divcima {
+color: #f28fa6;
+    margin-left: 20px;
+}
+
+.hc {
+
+    font-size: 20px;
+}
+
+/* Logo */
+.logo {
+  position: relative;
+    height: 210px;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Banner */
+.banner {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.entrega {
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.principal {
+text-align: center;
+    align-items: center;
+    margin: auto;
+   
+}
+
+
+/* Conteúdo das velas */
+.conteudo1, .conteudo2 {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 100px;  /* Reduzido o espaçamento entre as divs */
+    padding: 6px;
+    margin-top: 10px;
+    width: 100%;
+   
+}
+
+/* Estilos das velas */
+.velas {
+    border-radius: 7px;
+    box-shadow: 4px 4px 10px rgba(179, 49, 120, 0.425);
+    padding: 6px;
+    width: 240px;
+    height: 500px;
+    text-align: center;
+    margin-bottom: 10px;  /* Reduzido o espaço inferior */
+    margin-left: 62px;
+}
+
+.hv {
+    color: #f28fa6;
+    font-size: 38px;
+    font-family: 'Great Vibes', cursive;
+}
+
+.pv {
+    color: #f28fa6;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 18px;
+}
+
+.imgvela {
+    height: 200px;  /* Diminuído o tamanho da imagem */
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.add {
+    color: #f28fa6;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #f28fa6;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add:hover {
+    background-color: #f28fa6;
+    color: white;
+}
+
+.rodape {
+ background-color: #f28fa6;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+   position: relative; /* ou fixed para n sair da tela */
+  bottom: 0; /* parte de baixo */
+  width: 100%;
+
+}
+
+.conteudo-rodape {
+
+ max-width: 1200px;
+  margin: auto;
+
+}
+
+
+
+/* Responsividade para telas menores */
+@media (max-width: 1024px) {
+    .conteudo1, .conteudo2 {
+        gap: 10px;  /* Reduzido o espaçamento entre os itens */
+        justify-content: center;
+    }
+
+    .velas {
+        width: calc(44% - 10px);  /* Ajuste para duas colunas */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajusta a largura das velas para tela de tablet ou celular */
+    .conteudo1, .conteudo2 {
+        gap: 10px;  /* Reduzido o espaçamento entre os itens */
+        justify-content: center;
+    }
+
+    .velas {
+        width: 100%;  /* Ajuste para uma coluna */
+        height: auto;
+    }
+
+    .logo {
+        height: 150px;
+    }
+
+    .busca input {
+        width: 200px;
+    }
+
+    .busca button {
+        width: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para telas de celular */
+    .cabecalho {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        height: 120px;
+    }
+
+    .busca input {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .busca button {
+        width: 80%;
+    }
+
+    .velas {
+        width: 100%;
+        height: auto;
+    }
+
+    .entrega {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .barra-topo, .barra-fim {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .redes-sociais i {
+        margin-right: 15px;
+        margin-bottom: 10px;
+    }
+}
